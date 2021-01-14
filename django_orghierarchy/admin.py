@@ -161,7 +161,7 @@ class ProtectedAffiliatedOrganizationInline(ProtectedSubOrganizationInline):
 
 @admin.register(Organization)
 class OrganizationAdmin(DraggableMPTTAdmin):
-    filter_horizontal = ('admin_users', 'regular_users')
+    filter_horizontal = ('admin_users', 'regular_users', 'private_users')
     form = OrganizationForm
     inlines = [ProtectedSubOrganizationInline, SubOrganizationInline, AddSubOrganizationInline,
                ProtectedAffiliatedOrganizationInline, AffiliatedOrganizationInline, AddAffiliatedOrganizationInline]

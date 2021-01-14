@@ -84,6 +84,7 @@ class Organization(MPTTModel, DataModel):
     parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children',
                             help_text=_('The organizations that contain this organization'))
     admin_users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='admin_organizations')
+    private_users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, related_name='public_memberships')
     regular_users = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True,
                                            related_name='organization_memberships')
     created_by = models.ForeignKey(
