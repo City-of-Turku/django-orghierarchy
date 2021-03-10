@@ -17,9 +17,9 @@ setup(
     license='MIT License',
     description='Reusable Django application for hierarchical organizations.',
     long_description=README,
-    url='https://github.com/City-of-Helsinki/django-orghierarchy',
-    author='City of Helsinki',
-    author_email='dev@hel.fi',
+    url='https://github.com/City-of-Turku/django-orghierarchy',
+    author='City of Turku',
+    author_email='matias.peltonen@turku.fi',
     install_requires=['django-mptt', 'djangorestframework', 'requests', 'swapper'],
     classifiers=[
         'Environment :: Web Environment',
