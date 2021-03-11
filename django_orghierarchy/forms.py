@@ -14,7 +14,7 @@ class OrganizationForm(forms.ModelForm):
             'data_source', 'origin_id', 'classification',
             'name', 'founding_date', 'dissolution_date',
             'internal_type', 'parent', 'admin_users',
-            'regular_users', 'replaced_by',
+            'regular_users', 'private_users', 'replaced_by',
         )
 
     def __init__(self, *args, **kwargs):
